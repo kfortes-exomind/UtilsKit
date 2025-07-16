@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ErrorLocalized.swift
 //  UtilsKit
 //
 //  Created by Michael Coqueret on 04/07/2025.
@@ -9,7 +9,7 @@
 import SwiftUI
 
 // Define a public protocol named ErrorLocalized that inherits from the Error protocol
-public protocol ErrorLocalized: Error {
+nonisolated public protocol ErrorLocalized: Error {
 	
 	// Require a read-only property named errorDescription of type LocalizedStringKey
 	// This property provides a localized description of the error

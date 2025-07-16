@@ -13,7 +13,7 @@ import OSLog
  Manager providing methods to save and retrieve files from local directories.
  This class makes the use of paths abtract and let you manage files with only names.
  */
-public struct DocumentManager: Sendable {
+actor DocumentManager {
 	
 	// MARK: Static
 	

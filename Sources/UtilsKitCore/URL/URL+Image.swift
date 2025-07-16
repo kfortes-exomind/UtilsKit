@@ -21,7 +21,7 @@ extension URL {
 	 
 	 - Returns: A `Data` object containing the JPEG representation of the image, or `nil` if the image could not be fetched or converted.
 	 */
-	public func getImage(compressionQuality: CGFloat = 0.1) async -> Data? {
+	nonisolated public func getImage(compressionQuality: CGFloat = 0.1) async -> Data? {
 		await withCheckedContinuation { continuation in
 			Task {
 				guard let image = try? await self.toImage() else {
@@ -34,7 +34,7 @@ extension URL {
 		}
 	}
 	
-	private func toImage() async throws -> UIImage? {
+	nonisolated private func toImage() async throws -> UIImage? {
 		var request = URLRequest(url: self)
 		request.cachePolicy = .reloadIgnoringLocalCacheData
 		let (data, _) = try await URLSession.shared.data(for: request)

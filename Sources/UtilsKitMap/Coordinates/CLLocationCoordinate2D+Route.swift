@@ -9,12 +9,12 @@
 import Foundation
 import MapKit
 
-extension MKPolyline: @unchecked Sendable { }
+extension MKPolyline: @retroactive @unchecked Sendable { }
 
 extension CLLocationCoordinate2D {
 	
 	/// Get route to coordinate
-	public func getRoute(from coordinate: CLLocationCoordinate2D) async throws -> MKPolyline {
+	nonisolated public func getRoute(from coordinate: CLLocationCoordinate2D) async throws -> MKPolyline {
 		let request = MKDirections.Request()
 		request.source = MKMapItem(placemark: MKPlacemark(coordinate: coordinate,
 														  addressDictionary: nil))
@@ -46,7 +46,7 @@ extension CLLocationCoordinate2D {
 extension Array where Element == CLLocationCoordinate2D {
 	
 	/// Get routes between coordinates
-	public func getRoutes() async -> [MKPolyline] {
+	nonisolated public func getRoutes() async -> [MKPolyline] {
 		var routes: [MKPolyline?] = []
 		
 		guard var current = self.first else { return [] }

@@ -25,7 +25,7 @@ extension MKLocalSearchCompletion: @retroactive Identifiable {
 	///
 	/// - Returns: A `CLLocationCoordinate2D` representing the geographic coordinate of the location.
 	/// - Throws: An error of type `UnknownCoordinate` if the coordinate cannot be resolved.
-	public var coordinate: CLLocationCoordinate2D {
+	nonisolated public var coordinate: CLLocationCoordinate2D {
 		get async throws {
 			let request = MKLocalSearch.Request(completion: self)
 			let search = MKLocalSearch(request: request)

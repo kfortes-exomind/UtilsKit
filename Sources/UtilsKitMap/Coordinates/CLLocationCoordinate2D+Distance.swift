@@ -23,9 +23,10 @@ extension CLLocationCoordinate2D {
 	}
 	
 	/// Get distance and duration to `coordinate`
-	public func getDistanceAndDuration(from coordinate: CLLocationCoordinate2D,
-									   transportType: MKDirectionsTransportType = .automobile) async throws -> (distance: Double,
-																												duration: TimeInterval) {
+	nonisolated public func getDistanceAndDuration(from coordinate: CLLocationCoordinate2D,
+												   transportType: MKDirectionsTransportType = .automobile) async throws
+	-> (distance: Double, duration: TimeInterval) {
+		
 		let source = MKPlacemark(coordinate: coordinate)
 		let destination = MKPlacemark(coordinate: self)
 		

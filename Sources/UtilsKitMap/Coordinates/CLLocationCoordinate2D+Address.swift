@@ -8,11 +8,12 @@
 #if canImport(CoreLocation)
 import CoreLocation
 import Contacts
+import UtilsKitCore
 
 extension CLLocationCoordinate2D {
 	
 	/// Init Coordinate from address
-	public init(from address: String) async throws {
+	nonisolated public init(from address: String) async throws {
 		let location =
 		try await withCheckedThrowingContinuation { (continuation: _Concurrency.CheckedContinuation<CLLocation, Error>) in
 			CLGeocoder().geocodeAddressString(address) { placemarks, error in
@@ -34,7 +35,7 @@ extension CLLocationCoordinate2D {
 	}
 	
 	/// Get address from coordinate
-	public func getAddress() async throws -> CNPostalAddress {
+	nonisolated public func getAddress() async throws -> CNPostalAddress {
 		
 		let latitude = self.latitude
 		let longitude = self.longitude

@@ -8,16 +8,16 @@
 
 import Foundation
 
-public class Snowflake: @unchecked Sendable {
+public actor Snowflake {
 	
 	private static let shared = Snowflake()
 	
-	public static func generate() -> Int {
-		Self.shared.generate()
+	public static func generate() async -> Int {
+		await Self.shared.generate()
 	}
 	
-	public static func set(epoch: Int) {
-		Self.shared.set(epoch: epoch)
+	public static func set(epoch: Int) async {
+		await Self.shared.set(epoch: epoch)
 	}
 	
 	public static func getDeviceId() -> String {
