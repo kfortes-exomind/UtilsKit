@@ -41,6 +41,8 @@ extension CLLocationCoordinate2D {
 	}
 }
 
+extension MKPolyline: @unchecked Sendable {}
+
 extension Array where Element == CLLocationCoordinate2D {
 	
 	/// Get routes between coordinates

@@ -22,10 +22,10 @@ public struct DocumentManager {
     // MARK: Static
     
     /** Instance of the manager based on the document directory. */
-    public static let document = DocumentManager(directory: .documentDirectory, mask: .userDomainMask)
+    @MainActor public static let document = DocumentManager(directory: .documentDirectory, mask: .userDomainMask)
     
     /** Instance of the manager based on the cache directory. */
-    public static let cache = DocumentManager(directory: .cachesDirectory, mask: .userDomainMask)
+    @MainActor public static let cache = DocumentManager(directory: .cachesDirectory, mask: .userDomainMask)
     
     // MARK: Variables
     private let fileManager: FileManager = FileManager.default

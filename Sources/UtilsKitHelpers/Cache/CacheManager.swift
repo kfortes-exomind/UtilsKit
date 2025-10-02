@@ -21,7 +21,7 @@ private let kUserDefaultsName = "UtilsKit.CacheManager"
 public final class CacheManager: NSObject {
     
     /// The shared singleton AlertManager object
-    public static var shared = CacheManager()
+    @MainActor public static var shared = CacheManager()
     
     private let cache = UserDefaults(suiteName: kUserDefaultsName)
     

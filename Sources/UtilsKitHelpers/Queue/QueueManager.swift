@@ -16,12 +16,12 @@ import Foundation
  Example usage:
  - link the operation to an identifiable (such as a view controller) to avoid adding it twice in the queue
  */
-public class QueueManager {
+public final class QueueManager {
     
     /**
      Shared instance
      */
-    public static let shared = QueueManager()
+    @MainActor public static let shared = QueueManager()
     
     private lazy var queue: OperationQueue = {
         let queue = OperationQueue()

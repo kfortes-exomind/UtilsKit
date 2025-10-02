@@ -12,7 +12,7 @@ import UIKit
 /**
  Default empty collection view cell
  */
-public final class UIEmptyCollectionViewCell: UICollectionViewCell, ViewReusable {
+public final class UIEmptyCollectionViewCell: UICollectionViewCell, @preconcurrency ViewReusable {
     public static var nibName: String? = ""
     public static var identifier: String = "UIEmptyCollectionViewCell"
 }

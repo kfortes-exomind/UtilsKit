@@ -46,7 +46,7 @@ public struct AlertManager {
     
     // MARK: Singleton
     /// The shared singleton AlertManager object
-    public static var shared = AlertManager()
+    @MainActor public static var shared = AlertManager()
     
     private init() { }
     

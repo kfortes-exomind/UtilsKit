@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public class HostingTableViewCell<Content: CellView>: UITableViewCell, ViewReusable {
+public class HostingTableViewCell<Content: CellView>: UITableViewCell, @preconcurrency ViewReusable {
 	
 	// MARK: - Static
 	public static var identifier: String { Content.identifier }

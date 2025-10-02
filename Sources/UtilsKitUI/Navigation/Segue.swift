@@ -287,7 +287,7 @@ public enum Segue {
 }
 
 @available(iOSApplicationExtension, introduced: 1.0, unavailable)
-extension Segue: Equatable {
+extension Segue: @preconcurrency Equatable {
 	
 	@MainActor
 	public static func == (lhs: Segue, rhs: Segue) -> Bool {

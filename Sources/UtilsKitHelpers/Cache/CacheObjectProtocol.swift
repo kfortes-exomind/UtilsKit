@@ -25,14 +25,14 @@ extension CacheObjectProtocol {
      
      - returns: the retrieved data or nil.
      */
-    public static func get(forKey key: String) -> Self? {
+    @MainActor public static func get(forKey key: String) -> Self? {
         CacheManager.shared.get(forKey: key)
     }
     
     /**
      Cache object.
      */
-    public func save() {
+    @MainActor public func save() {
         CacheManager.shared.set(self, key: self.cacheKey)
     }
 }

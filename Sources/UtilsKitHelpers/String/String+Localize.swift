@@ -8,11 +8,11 @@
 
 import Foundation
 
-fileprivate var _currentLanguages: [String]?
+@MainActor fileprivate var _currentLanguages: [String]?
 
 extension Locale {
 	
-	public static var currentLanguages: [String] {
+	@MainActor public static var currentLanguages: [String] {
 		get {
 			_currentLanguages ?? (UserDefaults.standard.array(forKey: "AppleLanguages") as? [String]) ?? []
 		}
