@@ -18,7 +18,7 @@ private let kUserDefaultsName = "UtilsKit.CacheManager"
 /**
     Provide methods to cache and retrieve from cache codable objects.
  */
-public class CacheManager: NSObject {
+public final class CacheManager: NSObject {
     
     /// The shared singleton AlertManager object
     public static var shared = CacheManager()
