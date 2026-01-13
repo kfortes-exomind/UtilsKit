@@ -75,7 +75,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => 'https://github.com/monCompteGithub/MonPackageUtils.git', :branch => 'Version-4-0-0' }
+  spec.source       = { :git => 'https://github.com/monCompteGithub/MonPackageUtils.git', :branch => 'Version-4-0-0-Swift5' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
