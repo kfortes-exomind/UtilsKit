@@ -85,24 +85,18 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  spec.source_files  = "Sources", "Sources/**/*.{h,m}"
   
-  # spec.subspec 'UtilsKitCore' do |core|
-  #   core.source_files = 'Sources/**/*.{swift}'
-  # end
+  spec.subspec 'UtilsKitCore' do |core|
+    core.source_files = 'Sources/UtilsKitCore/**/*.{swift}'
+  end
   
-  # spec.subspec 'UtilsKitHelpers' do |core|
-  #   core.source_files = 'Sources/**/*.{swift}'
-  # end
+  spec.subspec 'UtilsKitHelpers' do |core|
+    core.source_files = 'Sources/UtilsKitHelpers/**/*.{swift}'
+  end
   
-  # spec.subspec 'UtilsKitUI' do |core|
-  #   core.source_files = 'Sources/**/*.{swift}'
-  # end
-  
-  # spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
+  spec.subspec 'UtilsKitUI' do |core|
+    core.source_files = 'Sources/UtilsKitUI/**/*.{swift}'
+  end
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
