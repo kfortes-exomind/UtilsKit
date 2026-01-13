@@ -125,6 +125,18 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
+  spec.subspec 'UtilsKitCore' do |core|
+    core.source_files = 'Sources/Core/**/*.{swift}'
+  end
+  
+  spec.subspec 'UtilsKitHelpers' do |core|
+    core.source_files = 'Sources/Core/**/*.{swift}'
+  end
+  
+  spec.subspec 'UtilsKitUI' do |core|
+    core.source_files = 'Sources/Core/**/*.{swift}'
+  end
+
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
