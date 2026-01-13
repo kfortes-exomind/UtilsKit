@@ -17,17 +17,16 @@ Pod::Spec.new do |spec|
 
   spec.name         = "UtilsKit"
   spec.version      = "4.0.0"
-  spec.summary      = "A short description of UtilsKit."
+  spec.summary      = "Utils communs pour les projets iOS"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
-
-  spec.homepage     = "http://EXAMPLE/UtilsKit"
+  spec.description      = 'Ensemble d’outils et d’extensions partagés.'
+  
+  spec.homepage     = "https://github.com/kfortes-exomind/UtilsKit"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +37,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,10 +50,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "Pierre" => "224536867+PCilluffo@users.noreply.github.com" }
-  # Or just: spec.author    = "Pierre"
-  # spec.authors            = { "Pierre" => "224536867+PCilluffo@users.noreply.github.com" }
-  # spec.social_media_url   = "https://twitter.com/Pierre"
+  spec.author    = "mike9525"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -80,7 +75,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/UtilsKit.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => 'https://github.com/monCompteGithub/MonPackageUtils.git', :branch => 'Version-4-0-0' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
