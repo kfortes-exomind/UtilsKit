@@ -126,15 +126,15 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
   spec.subspec 'UtilsKitCore' do |core|
-    core.source_files = 'Sources/Core/**/*.{swift}'
+    core.source_files = 'Sources/**/*.{swift}'
   end
   
   spec.subspec 'UtilsKitHelpers' do |core|
-    core.source_files = 'Sources/Core/**/*.{swift}'
+    core.source_files = 'Sources/**/*.{swift}'
   end
   
   spec.subspec 'UtilsKitUI' do |core|
-    core.source_files = 'Sources/Core/**/*.{swift}'
+    core.source_files = 'Sources/**/*.{swift}'
   end
 
   # spec.requires_arc = true
