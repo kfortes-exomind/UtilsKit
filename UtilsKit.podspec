@@ -86,8 +86,21 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "Sources", "Sources/**/*.{h,m}"
+  
+  # spec.subspec 'UtilsKitCore' do |core|
+  #   core.source_files = 'Sources/**/*.{swift}'
+  # end
+  
+  # spec.subspec 'UtilsKitHelpers' do |core|
+  #   core.source_files = 'Sources/**/*.{swift}'
+  # end
+  
+  # spec.subspec 'UtilsKitUI' do |core|
+  #   core.source_files = 'Sources/**/*.{swift}'
+  # end
+  
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -124,18 +137,6 @@ Pod::Spec.new do |spec|
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
-
-  spec.subspec 'UtilsKitCore' do |core|
-    core.source_files = 'Sources/**/*.{swift}'
-  end
-  
-  spec.subspec 'UtilsKitHelpers' do |core|
-    core.source_files = 'Sources/**/*.{swift}'
-  end
-  
-  spec.subspec 'UtilsKitUI' do |core|
-    core.source_files = 'Sources/**/*.{swift}'
-  end
 
   # spec.requires_arc = true
 
